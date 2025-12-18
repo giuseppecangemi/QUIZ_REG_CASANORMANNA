@@ -25,11 +25,17 @@ app.secret_key = os.environ.get("SECRET_KEY", "dev-secret-change-me")
 # -----------------------------
 # DB (Postgres via DATABASE_URL)
 # -----------------------------
-DATABASE_URL = os.getenv("DATABASE_URL")  # su Render
+from sqlalchemy.orm import sessionmaker, declarative_base
+
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+# Fix compatibilità: alcuni provider usano postgres://
+if DATABASE_URL and DATABASE_URL.startswith("postgres://"):
+    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
+
 engine = create_engine(DATABASE_URL, pool_pre_ping=True) if DATABASE_URL else None
 SessionDB = sessionmaker(bind=engine) if engine else None
 Base = declarative_base()
-
 
 class QuizAttempt(Base):
     __tablename__ = "quiz_attempts"
