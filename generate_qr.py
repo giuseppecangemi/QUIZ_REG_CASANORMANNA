@@ -1,7 +1,7 @@
 import os
 import qrcode
 
-BASE_URL = "http://192.168.1.8:5001"  # <-- il tuo IP/porta che funzionano dal telefono
+BASE_URL = "https://quiz-reg-casanormanna.onrender.com"  # <-- il tuo IP/porta che funzionano dal telefono
 
 os.makedirs("static/qr", exist_ok=True)
 
