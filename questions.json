@@ -1,18 +1,25 @@
 [
   {
     "id": 1,
-    "question": "Domanda Tamburi 1 (placeholder)?",
-    "choices": ["A", "B", "C", "D"],
-    "answer_index": 0,
-    "explanation": "Spiegazione placeholder."
+    "question": "Un brano con con difficoltà aggiuntiva “++” da cosa può essere contraddistinto?",
+    "choices": ["Controtempi o virtusiosmi", "Dinamiche o canoni", "Inginocchiamento o utilizzo accessori"],
+    "answer_index": 2,
+    "explanation": "Inginocchiamento o utilizzo accessori"
   },
   {
     "id": 2,
-    "question": "Domanda Tamburi 2 (placeholder)?",
-    "choices": ["A", "B", "C", "D"],
+    "question": "I declassamenti possono essere applicati a tutte le tipologie di brani.",
+    "choices": ["Vero", "Falso"],
     "answer_index": 1,
-    "explanation": "Spiegazione placeholder."
+    "explanation": "Falso"
   },
+  {
+    "id": 19,
+    "question": "Nel caso in cui fossero presenti tre o più difficoltà aggiuntive all'interno dello stesso brano, verranno scartate quelle di minor valore.",
+    "choices": ["Vero", "Falso"],
+    "answer_index": 1,
+    "explanation": "Falso"
+  }
   {
     "id": 3,
     "question": "Rispetto i tamburi, come viene determinata la lunghezza del brano?",

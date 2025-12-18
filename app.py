@@ -86,7 +86,7 @@ def load_questions():
 QUESTIONS = load_questions()
 
 GROUPS = {
-    "tamburi": [1, 2],
+    "tamburi": [1, 2, 19],
     "chiarine": [3, 4, 5, 6, 7, 8, 9],
     "tamburi_giudizioGrande": [10, 11, 12],
     "chiarine_giudizioGrande": [13, 14, 15],
