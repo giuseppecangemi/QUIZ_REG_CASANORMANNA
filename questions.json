@@ -64,7 +64,7 @@
   },
       {
     "id": 9,
-    "question": "Durante la coreografia, la sezione si separa in due gruppi ben distinti. Questo comporta un aumento delle probabilità di errore e nello specifico di sfasamento (gli esecutori non suonano a tempo tra di loro). Quale penalità viene riconosciuta?",
+    "question": "Durante la coreografia, la sezione si separa in due gruppi ben distinti. Questo comporta un aumento delle probabilità di errore e nello specifico di sfasamento (gli esecutori non suonano a tempo tra di loro). Quale penalità può essere riconosciuta?",
     "choices": ["Lieve", "Media", "Grave", "Gravissima"],
     "answer_index":1,
     "explanation": "Media. Esecutori nella sezione che non suonano a tempo tra di loro (sfasature) o non partecipano attivamente all’esecuzione del brano, se non previsto dalla costruzione armonica dello stesso (comunemente detto “playback”)."
@@ -88,7 +88,7 @@
     "question": "Il secondo brano dopo la terza ritmica è un brano B (tra i 15.50 sec. e i 21.49 sec.). All'interno sentiamo dinamica e polifonia. Perché i giudici non possono dare come difficoltà aggiuntiva la polifonia?",
     "choices": ["Tra due difficoltà aggiuntive si sceglie quella con punteggio inferiore (dinamica)", "La polifonia è fatta tra sezioni differenti 'alti' e 'bassi'", "La polifonia non è eseguita per la maggiorparte del brano."],
     "answer_index":2,
-    "explanation": "La polifonia deve essere evidente per la maggiorparte del brano. In questo caso circa 4 secondi su 15.50."
+    "explanation": "La polifonia deve essere evidente per la maggiorparte del brano. In questo caso all'inizio non è chiaro se fanno polifonia. Di certo si sente la polifonia su circa 4 secondi su 15.50."
   },
       {
     "id": 16,
