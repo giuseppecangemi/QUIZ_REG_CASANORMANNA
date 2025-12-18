@@ -98,7 +98,7 @@
     "explanation": "L"
   },
       {
-    "id": 17,
+    "id": 17, 
     "question": "La Separazione è definita, e riconosciuta valida, quando il Gruppo Musici si divide in almeno 2 sottogruppi, nettamente distinti e distanti, ognuno dei quali con una differenza  - tra il numero dei componenti - non superiore a:",
     "choices": ["1 unità", "2 unità", "3 unità", "4 unità"],
     "answer_index":1,
@@ -110,5 +110,19 @@
     "choices": ["8", "10", "12", "14"],
     "answer_index":2,
     "explanation": "12"
+  },
+    {
+    "id": 20,
+    "question": "Il primo brano da 2.10 minuti è un brano A (tra i 21.50 sec. e i 27.99 sec.), quali difficoltà aggiuntive riconoscete al suo interno?",
+    "choices": ["+ ++", "++ +++", "++ ++++"],
+    "answer_index":1,
+    "explanation": "++ +++: brano eseguito in separazione e con l'utilizzo di accessori"
+  },
+  {
+    "id": 21,
+    "question": "Il brano appena ascoltato non contiene alcuna caratteristica musicale particolare, ma viene riconosciuto una difficoltà aggiuntiva, quale?",
+    "choices": ["++", "+++", "++++"],
+    "answer_index":1,
+    "explanation": "+++: brano eseguito in separazione"
   }
 ]
