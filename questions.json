@@ -19,7 +19,7 @@
     "choices": ["Vero", "Falso"],
     "answer_index": 1,
     "explanation": "Falso"
-  }
+  },
   {
     "id": 3,
     "question": "Rispetto i tamburi, come viene determinata la lunghezza del brano?",
