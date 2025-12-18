@@ -15,23 +15,93 @@
   },
   {
     "id": 3,
-    "question": "Chiarine: quando è consentito iniziare (placeholder)?",
-    "choices": ["Subito", "Solo al segnale", "Mai", "Solo dopo 10 minuti"],
-    "answer_index": 1,
-    "explanation": "Placeholder: si inizia solo al segnale."
+    "question": "Rispetto i tamburi, come viene determinata la lunghezza del brano?",
+    "choices": ["tra un 'cia cia bum' all'altro", "Dalla prima nota alla pausa finale", "Dalla prima all'ultima nota"],
+    "answer_index": 2,
+    "explanation": "Dalla prima all'ultima nota. lo stacco o la pausa evidente di circa 3 secondi servono esclusivamente per determinarne l’interruzione."
   },
   {
     "id": 4,
-    "question": "Chiarine: quale comportamento è corretto (placeholder)?",
-    "choices": ["Ignorare le indicazioni", "Seguire il capogruppo", "Cambiare ritmo a caso", "Suonare più forte possibile"],
-    "answer_index": 1,
-    "explanation": "Placeholder: si segue il capogruppo."
+    "question": "Per rientrare nella classe di merito B (brano lungo), quanto lungo deve essere il brano?",
+    "choices": ["Maggiore di 9 secondi", "Tra gli 8 e i 14.49 secondi", "Almeno 15.50 secondi", "Tra i 15.50 sec. e i 21.49 sec."],
+    "answer_index": 3,
+    "explanation": "Tra i 15.50 sec. e i 21.49 sec. Se non hai un momento di fine specifico il brano può rientrare nelle categorie superiori (A-AA). "
   },
   {
     "id": 5,
-    "question": "Chiarine: cosa fare in caso di errore (placeholder)?",
-    "choices": ["Continuare e basta", "Fermarsi subito", "Riprendere dalla battuta corretta", "Uscire dalla formazione"],
+    "question": "Se la sezione bassi (composta da 3 tromboni) utilizza i c.d. pedali, il brano può essere declassato per assenza di linea ritmica?",
+    "choices": ["Sì, la sezione non dovrebbe suonare solo note lunghe", "No, i bassi possono farlo", "No, perché la sezione ha un numero inferiore a 5", "Dipende dal numero totale di esecutori"],
+    "answer_index": 3,
+    "explanation": "Dipende dal numero totale di esecutori. Se l'intera sezione è composta da 10 chiarine, i 3 tromboni non sono la maggioranza. "
+  },
+    {
+    "id": 6,
+    "question": "Cosa dobbiamo fare per farci riconoscere un brano offuscato?",
+    "choices": ["Suonare forte", "Suonare un brano tutto in dinamica", "Suonare come i Panzera"],
     "answer_index": 2,
-    "explanation": "Placeholder: si riprende dalla battuta corretta."
+    "explanation": "Suonare come i Panzera. Quando la sezione tamburi copre la sezione chiarine il giudice è costretto a dare brano offuscato."
+  },
+  {
+    "id": 7,
+    "question": "Quali difficoltà aggiuntive NON concorrono all'aumento del punteggio di base di un brano?",
+    "choices": ["Rallentamento e dinamica", "Cambio di velocità, inginocchiamento, dinamica", "voci polifoniche", "suonare durante la spettacolarità"],
+    "answer_index":3,
+    "explanation": "Suonare durante la spettacolarità non aumenta il punteggio di base del brano."
+  },
+    {
+    "id": 8,
+    "question": "Un componente della sezione fiati attacca in ritardo (o in anticipo) l'esecuzione del brano. Quale penalità viene riconosciuta?",
+    "choices": ["Lieve", "Media", "Grave", "Gravissima"],
+    "answer_index":0,
+    "explanation": "Lieve. Esecutori nella sezione che, involontariamente, non iniziano o non terminano le note assieme (attacchi, code, anche durante lo svolgimento del brano)."
+  },
+      {
+    "id": 9,
+    "question": "Durante la coreografia, la sezione si separa in due gruppi ben distinti. Questo comporta un aumento delle probabilità di errore e nello specifico di sfasamento (gli esecutori non suonano a tempo tra di loro). Quale penalità viene riconosciuta?",
+    "choices": ["Lieve", "Media", "Grave", "Gravissima"],
+    "answer_index":1,
+    "explanation": "Media. Esecutori nella sezione che non suonano a tempo tra di loro (sfasature) o non partecipano attivamente all’esecuzione del brano, se non previsto dalla costruzione armonica dello stesso (comunemente detto “playback”)."
+  },
+        {
+    "id": 13,
+    "question": "Il primo brano della grande è un brano A (tra i 21.50 sec. e i 27.99 sec.). Che difficoltà aggiuntive riconoscete all'interno del brano?",
+    "choices": ["Dinamica", "Polifonia", "Separazione", "Rallentamento"],
+    "answer_index":1,
+    "explanation": "Polofonia. 2 o più voci strumentali indipendenti, dette anche parti o linee melodiche, le quali si sovrappongono in contrappunto (e non all'unisono) nel corso della composizione del brano."
+  },
+    {
+    "id": 14,
+    "question": "Il secondo brano della grande è un brano A (tra i 21.50 sec. e i 27.99 sec.). Che difficoltà aggiuntive riconoscete all'interno del brano?",
+    "choices": ["Dinamica", "Polifonia", "Separazione", "Rallentamento"],
+    "answer_index":0,
+    "explanation": "Dinamica. parte di brano suonata a volume piano, eseguita per la durata di almeno un inciso."
+  },
+    {
+    "id": 15,
+    "question": "Il secondo brano dopo la terza ritmica è un brano B (tra i 15.50 sec. e i 21.49 sec.). All'interno sentiamo dinamica e polifonia. Perché i giudici non possono dare come difficoltà aggiuntiva la polifonia?",
+    "choices": ["Tra due difficoltà aggiuntive si sceglie quella con punteggio inferiore (dinamica)", "La polifonia è fatta tra sezioni differenti 'alti' e 'bassi'", "La polifonia non è eseguita per la maggiorparte del brano."],
+    "answer_index":2,
+    "explanation": "La polifonia deve essere evidente per la maggiorparte del brano. In questo caso circa 4 secondi su 15.50."
+  },
+      {
+    "id": 16,
+    "question": "Tali figurazioni potranno essere realizzate – dalla totalità del Gruppo Musici – solo durante la fase iniziale dell'esercizio, prima dell'inizio della sbandierata, e prevedono l'interazione fra Gruppo Musici e Gruppo Sbandieratori, sia dal punto di vista coreografico che musicale. Di quale figura si tratta ",
+    "choices": ["Tra due difficoltà aggiuntive si sceglie quella con punteggio inferiore (dinamica)", "La polifonia è fatta tra sezioni differenti 'alti' e 'bassi'", "La polifonia non è eseguita per la maggiorparte del brano."],
+    "answer_index":2,
+    "explanation": "L"
+  },
+      {
+    "id": 17,
+    "question": "La Separazione è definita, e riconosciuta valida, quando il Gruppo Musici si divide in almeno 2 sottogruppi, nettamente distinti e distanti, ognuno dei quali con una differenza  - tra il numero dei componenti - non superiore a:",
+    "choices": ["1 unità", "2 unità", "3 unità", "4 unità"],
+    "answer_index":1,
+    "explanation": "2 unità"
+  },
+      {
+    "id": 18,
+    "question": "Quanti punti di contatto (momenti di sincronismo) possono essere ottenuti ?",
+    "choices": ["8", "10", "12", "14"],
+    "answer_index":2,
+    "explanation": "12"
   }
 ]
