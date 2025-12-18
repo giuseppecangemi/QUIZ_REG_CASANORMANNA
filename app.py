@@ -348,7 +348,8 @@ def api_stats(group_code):
                 "question_id": int(qid),
                 "question": qobj["question"],
                 "choices": qobj["choices"],
-                "counts": counts
+                "counts": counts,
+                "answer_index": int(qobj["answer_index"]),
             })
 
         return jsonify({"group": group_code, "items": payload})
