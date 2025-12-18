@@ -93,9 +93,9 @@
       {
     "id": 16,
     "question": "Tali figurazioni potranno essere realizzate – dalla totalità del Gruppo Musici – solo durante la fase iniziale dell'esercizio, prima dell'inizio della sbandierata, e prevedono l'interazione fra Gruppo Musici e Gruppo Sbandieratori, sia dal punto di vista coreografico che musicale. Di quale figura si tratta ",
-    "choices": ["Tra due difficoltà aggiuntive si sceglie quella con punteggio inferiore (dinamica)", "La polifonia è fatta tra sezioni differenti 'alti' e 'bassi'", "La polifonia non è eseguita per la maggiorparte del brano."],
+    "choices": ["Figura interna di insieme", "Figura esterna base", "Figura di presentazione"],
     "answer_index":2,
-    "explanation": "L"
+    "explanation": "La figura di presentazione."
   },
       {
     "id": 17, 
