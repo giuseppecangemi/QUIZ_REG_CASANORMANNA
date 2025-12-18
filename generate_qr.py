@@ -9,7 +9,7 @@ links = {
     "tamburi": f"{BASE_URL}/g/tamburi",
     "chiarine": f"{BASE_URL}/g/chiarine",
     "chiarine_giudizioGrande": f"{BASE_URL}/g/chiarine_giudizioGrande",
-    "tamburi_giudizioGrande": f"{BASE_URL}/g/chiarine_giudizioGrande",
+    "tamburi_giudizioGrande": f"{BASE_URL}/g/tamburi_giudizioGrande",
     "coreografia":f"{BASE_URL}/g/coreografia"
 
 }

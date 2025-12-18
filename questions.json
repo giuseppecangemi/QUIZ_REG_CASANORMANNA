@@ -124,5 +124,12 @@
     "choices": ["++", "+++", "++++"],
     "answer_index":1,
     "explanation": "+++: brano eseguito in separazione"
+  },
+    {
+    "id": 22,
+    "question": "San Luca (4.41m): Quali elementi riconoscete all'interno del brano?",
+    "choices": ["Controtempo e separazione", "Separazione", "Controtempo"],
+    "answer_index":2,
+    "explanation": "Controtempo: il brano è eseguito in controtempo senza separazione, poiché il gruppo tamburi rimane unito. "
   }
 ]
