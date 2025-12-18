@@ -8,6 +8,7 @@ from flask import (
     Flask, render_template, request, redirect, url_for, session,
     send_file, jsonify
 )
+
 from sqlalchemy import (
     create_engine, Column, BigInteger, Integer, String, Boolean,
     DateTime, ForeignKey, func
@@ -23,19 +24,20 @@ app.secret_key = os.environ.get("SECRET_KEY", "dev-secret-change-me")
 
 
 # -----------------------------
-# DB (Postgres via DATABASE_URL)
+# DB (Postgres via DATABASE_URL) - robusto per Render
 # -----------------------------
-from sqlalchemy.orm import sessionmaker, declarative_base
-
 DATABASE_URL = os.getenv("DATABASE_URL")
 
-# Fix compatibilità: alcuni provider usano postgres://
+# pulizia (evita virgolette/spazi messi per sbaglio su Render)
+if DATABASE_URL:
+    DATABASE_URL = DATABASE_URL.strip().strip('"').strip("'")
+
+# compatibilità (alcuni provider danno postgres://)
 if DATABASE_URL and DATABASE_URL.startswith("postgres://"):
     DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
 
-engine = create_engine(DATABASE_URL, pool_pre_ping=True) if DATABASE_URL else None
-SessionDB = sessionmaker(bind=engine) if engine else None
 Base = declarative_base()
+
 
 class QuizAttempt(Base):
     __tablename__ = "quiz_attempts"
@@ -55,8 +57,22 @@ class QuizAnswer(Base):
     answered_at = Column(DateTime, default=datetime.utcnow, nullable=False)
 
 
-if engine:
-    Base.metadata.create_all(engine)
+engine = None
+SessionDB = None
+
+try:
+    if DATABASE_URL:
+        # come nel tuo progetto “che funziona”
+        engine = create_engine(DATABASE_URL)
+        Base.metadata.create_all(engine)
+        SessionDB = sessionmaker(bind=engine)
+except Exception as e:
+    # Non facciamo morire l'app: parte senza stats
+    print("❌ DB init error. Controlla DATABASE_URL su Render.")
+    print("❌ DATABASE_URL prefix:", (DATABASE_URL or "")[:30] + "...")
+    print("❌ Exception:", repr(e))
+    engine = None
+    SessionDB = None
 
 
 # -----------------------------
@@ -77,12 +93,11 @@ GROUPS = {
     "coreografia": [16, 17, 18],
 }
 
-# Mappa id -> domanda (forza int per evitare problemi string/int)
 QMAP = {int(q["id"]): q for q in QUESTIONS}
 
 
 # -----------------------------
-# Helpers
+# Helpers DB
 # -----------------------------
 def create_attempt(group_code: str):
     """Crea un tentativo e ritorna attempt_id (o None se DB non configurato)."""
@@ -128,22 +143,18 @@ def index():
 
 @app.post("/start")
 def start():
-    # Quiz completo (tutte le domande)
     session.clear()
     session["q_ids"] = [int(q["id"]) for q in QUESTIONS]
     session["idx"] = 0
     session["score"] = 0
     session["wrong"] = []
     session["group_code"] = "full"
-
-    # attempt per stats
     session["attempt_id"] = create_attempt("full")
-
     return redirect(url_for("quiz"))
 
 
 # -----------------------------
-# Routes: Group landing + start (via QR)
+# Routes: Group landing + start
 # -----------------------------
 @app.get("/g/<group_code>")
 def group_landing(group_code):
@@ -166,8 +177,6 @@ def start_group(group_code):
     session["score"] = 0
     session["wrong"] = []
     session["group_code"] = group_code
-
-    # attempt per stats
     session["attempt_id"] = create_attempt(group_code)
 
     return redirect(url_for("quiz"))
@@ -253,7 +262,6 @@ def answer():
     selected = int(selected)
     ok = (selected == int(q["answer_index"]))
 
-    # aggiorna score / wrong
     if ok:
         session["score"] = session.get("score", 0) + 1
     else:
@@ -261,7 +269,7 @@ def answer():
         wrong.append(int(q["id"]))
         session["wrong"] = wrong
 
-    # salva risposta nel DB
+    # salva in DB
     save_answer(
         attempt_id=session.get("attempt_id"),
         group_code=session.get("group_code", "unknown"),
@@ -325,7 +333,6 @@ def api_stats(group_code):
               .all()
         )
 
-        # out[qid][sel] = count
         out = {}
         for qid, sel, n in rows:
             qid = int(qid)
