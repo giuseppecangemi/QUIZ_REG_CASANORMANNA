@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "question": "Domanda Tamburi 1 (placeholder)?",
+    "choices": ["A", "B", "C", "D"],
+    "answer_index": 0,
+    "explanation": "Spiegazione placeholder."
+  },
+  {
+    "id": 2,
+    "question": "Domanda Tamburi 2 (placeholder)?",
+    "choices": ["A", "B", "C", "D"],
+    "answer_index": 1,
+    "explanation": "Spiegazione placeholder."
+  },
+  {
+    "id": 3,
+    "question": "Chiarine: quando è consentito iniziare (placeholder)?",
+    "choices": ["Subito", "Solo al segnale", "Mai", "Solo dopo 10 minuti"],
+    "answer_index": 1,
+    "explanation": "Placeholder: si inizia solo al segnale."
+  },
+  {
+    "id": 4,
+    "question": "Chiarine: quale comportamento è corretto (placeholder)?",
+    "choices": ["Ignorare le indicazioni", "Seguire il capogruppo", "Cambiare ritmo a caso", "Suonare più forte possibile"],
+    "answer_index": 1,
+    "explanation": "Placeholder: si segue il capogruppo."
+  },
+  {
+    "id": 5,
+    "question": "Chiarine: cosa fare in caso di errore (placeholder)?",
+    "choices": ["Continuare e basta", "Fermarsi subito", "Riprendere dalla battuta corretta", "Uscire dalla formazione"],
+    "answer_index": 2,
+    "explanation": "Placeholder: si riprende dalla battuta corretta."
+  }
+]
